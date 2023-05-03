@@ -8,6 +8,14 @@ const Registration = () => {
              <Container className='mx-auto w-50 register-container'>
          <Form>
             <h2 className='text-center'>Register your account</h2>
+        <Form.Group className="mb-3">
+          <Form.Label>Your Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your name" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Photo Url</Form.Label>
+          <Form.Control type="text" placeholder="Enter photo Url" />
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
