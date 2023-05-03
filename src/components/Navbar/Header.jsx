@@ -11,8 +11,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto gap-3">
-            <Link to='/' className='text-decoration-none'>Home</Link>
-            <Link to='/blog' className='text-decoration-none'>Blog</Link>
+            <Link to='/' className='text-decoration-none text-white'>Home</Link>
+            <Link to='/blog' className='text-decoration-none text-white'>Blog</Link>
           </Nav>
 
           <Link to='/login'><Button>Login</Button></Link>
