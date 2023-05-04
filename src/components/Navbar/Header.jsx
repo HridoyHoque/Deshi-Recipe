@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -40,9 +40,9 @@ const Header = () => {
                         <Nav className="mx-auto gap-3">
                             <Link to='/' className='text-decoration-none text-black'>Home</Link>
                             <Link to='/blog' className='text-decoration-none text-black'>Blog</Link>
-                            <Link to='/' className='text-decoration-none text-black'>Order</Link>
+                            <Link to='/registration' className='text-decoration-none text-black'>NewUser</Link>
                         </Nav>
-
+                      {user && <Image title={user?.displayName} src={user?.photoURL} width="50" height="50" roundedCircle />}
                         {user ?
                             <Link to='/'><Button onClick={handleLogout} className='btn btn-danger'>Logout</Button></Link>
                             : <Link to='/login'><Button>Login</Button></Link>

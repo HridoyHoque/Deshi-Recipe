@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Chef = ({ chef }) => {
-    const { chefPicture, chefName , yearsOfExperience, description, numberOfRecipes} = chef;
+    const {id, chefPicture, chefName , yearsOfExperience, description, numberOfRecipes} = chef;
     return (
         <div className='mb-2'> 
             <Card style={{ width: '18rem' }}>
@@ -14,7 +15,7 @@ const Chef = ({ chef }) => {
                     {description}
                 </Card.Text>
                 <p >Recipe items: {numberOfRecipes}</p>
-                <Button variant="primary">View recipes</Button>
+                <Link to={`/chefs/${id}`}><Button variant="primary">View recipes</Button></Link>
             </Card.Body>
         </Card>
         </div>

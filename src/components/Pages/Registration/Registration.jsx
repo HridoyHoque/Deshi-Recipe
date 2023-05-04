@@ -17,16 +17,16 @@ const Registration = () => {
        const email = form.email.value;
        const password = form.password.value;
        const name = form.name.value;
-       const photo = form.photo.value;
+       const photoURL = form.photoURL.value;
 
-       console.log(name, email, password, photo,)
+       console.log(name, email, password, photoURL,)
        setError('')
 
        if(password.length < 6){
         setError('Your password must be at least 6 characters')
         return;
        }
-       if(password.length === 0 || name.length === 0 || photo.length === 0 || email.length === 0){
+       if(password.length === 0 || name.length === 0 || photoURL.length === 0 || email.length === 0){
         setError('Please fill the form with your information')
         return;
        }
@@ -61,7 +61,7 @@ const Registration = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPhoto">
           <Form.Label>Photo Url</Form.Label>
-          <Form.Control type="text" name='photo' placeholder="Enter photo Url" />
+          <Form.Control type="text" name='photoURL' placeholder="Enter photo Url" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
