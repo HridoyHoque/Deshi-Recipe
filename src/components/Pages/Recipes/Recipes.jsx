@@ -2,7 +2,9 @@ import React from 'react';
 import { Container, Image } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import { RiHeart2Line } from "react-icons/ri";
+import './Recipe.css'
 
+import RecipeCart from '../../RecipeCart/Recipecart';
 const Recipes = () => {
 
     const chef = useLoaderData()
@@ -18,10 +20,17 @@ const Recipes = () => {
                 <span className='ps-5'><RiHeart2Line />
                 </span> {chef.likes}
             </div>
-                <h3 className='text-center'>About: {chef.description}</h3 >
+                <p className='text-center'>About: {chef.description}</p >
                <h5 className='text-center text-primary'>I have {chef. numberOfRecipes} of Recipes</h5>
                <h6 className='text-center text-success'>I have {chef.yearsOfExperience} Years of Cooking Experience</h6>
                <hr />
+               <h1 className='text-bold text-center mb-4'>My Popular Recipes</h1>
+               <div className='recipe-container'>
+               {chefRecipe.map((Recipe) => (<RecipeCart
+                Recipe={Recipe}
+                ></RecipeCart>))
+               }
+               </div>
         </Container>
     );
 };
