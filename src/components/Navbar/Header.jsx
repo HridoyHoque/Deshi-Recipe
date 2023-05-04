@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Button, Container, Image, Nav, NavLink, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import './Header.css'
 
 
 const Header = () => {

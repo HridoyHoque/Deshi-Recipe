@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../../Banner/Banner';
 import Chef from '../../Chefs/Chef';
 import './Home.css'
+import Users from '../Users/Users';
+import CustomerReview from '../../Firebase/CustomerReview/CustomerReview';
 
 const Home = () => {
     const [chefs, setChefs] = useState(null)
@@ -37,6 +39,8 @@ const Home = () => {
          ))
           }
          </div>
+         <Users></Users>
+         <CustomerReview></CustomerReview>
         </div>
     );
 };
