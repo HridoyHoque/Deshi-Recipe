@@ -16,6 +16,10 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    const LoginUser = (email , password) => {
+        return signInWithEmailAndPassword(auth , email, password)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth , currentUser => {
               SetUser(currentUser)
@@ -27,7 +31,8 @@ const AuthProvider = ({children}) => {
 
          const AuthInfo = {
             user,
-            SignUpUser
+            SignUpUser,
+            LoginUser
          }
     return (
         <AuthContext.Provider value={AuthInfo}>
