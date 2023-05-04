@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB9fE_W-lIu95XYda7_xKKfpl87DwgagNI",
-  authDomain: "deshi-recipe-client.firebaseapp.com",
-  projectId: "deshi-recipe-client",
-  storageBucket: "deshi-recipe-client.appspot.com",
-  messagingSenderId: "830739275949",
-  appId: "1:830739275949:web:a49f4a2dfd5f0785336624"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
