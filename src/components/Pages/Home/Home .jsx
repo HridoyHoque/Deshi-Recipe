@@ -5,6 +5,16 @@ import './Home.css'
 
 const Home = () => {
     const [chefs, setChefs] = useState(null)
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        setIsMobile(mediaQuery.matches);
+    
+        const handleResize = () => setIsMobile(mediaQuery.matches);
+        mediaQuery.addEventListener('change', handleResize);
+    
+        return () => mediaQuery.removeEventListener('change', handleResize);
+      }, []);
 
     useEffect(() => {
         fetch('http://localhost:5000/chefs')
@@ -15,9 +25,9 @@ const Home = () => {
     return (
         <div>
           <Banner></Banner>
-          <h4 className='text-center'>Our Chefs</h4>
+          <h2 className='text-bold text-center mb-4 mt-3'>Our Best Chefs</h2>
 
-         <div className='container cart-container'>
+         <div className={isMobile ? '' : 'container cart-container'}>
          {
          chefs && chefs.map(chef => (
             <Chef
