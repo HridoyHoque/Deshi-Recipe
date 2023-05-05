@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         {
             path: "/chefs/:id",
             element: <Recipes></Recipes>,
-            loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+            loader: ({params}) => fetch(`https://deshi-recipe-server-hridoyhoque.vercel.app/chefs/${params.id}`)
         },
         {
             path: '*',

@@ -19,7 +19,7 @@ const Home = () => {
       }, []);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefs')
+        fetch('https://deshi-recipe-server-hridoyhoque.vercel.app/chefs')
         .then(res => res.json())
         .then(data => setChefs(data))
         .catch(error => console.error(error))
@@ -29,7 +29,7 @@ const Home = () => {
           <Banner></Banner>
           <h2 className='text-bold text-center mb-4 mt-3'>Our Best Chefs</h2>
 
-         <div className={isMobile ? '' : 'container cart-container'}>
+         <div className={isMobile ? '' : 'container-lg cart-container'}>
          {
          chefs && chefs.map(chef => (
             <Chef
