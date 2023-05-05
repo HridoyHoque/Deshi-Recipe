@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
 
@@ -45,10 +46,23 @@ const Registration = () => {
             progress: undefined,
             theme: "light",
             });
+            updateUserData(result.user, name, photoURL);
        })
        .catch(error => {
         console.log(error)
        })
+    }
+
+    const updateUserData = (user, name, photoURL) => {
+      updateProfile(user,{
+        displayName: name, photoURL: photoURL
+      })
+      .then(() => {
+        console.log('user updated successfully')
+      })
+      .catch(error => {
+        console.log(error)
+      })
     }
     return (
      

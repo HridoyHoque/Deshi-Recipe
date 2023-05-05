@@ -14,7 +14,7 @@ const Footer = () => {
             <h5>Contact Us</h5>
             <ul className="list-unstyled">
               <li> +1 123 456 7890</li>
-              <li>info@yourwebsite.com</li>
+              <li>info@deshirecipe.com</li>
               <li>123 Main Street, Dhaka Mirpur</li>
             </ul>
           </Col>
