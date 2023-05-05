@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import Recipes from "../Pages/Recipes/Recipes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/chefs/:id",
-            element: <Recipes></Recipes>,
+            element: <PrivateRoutes><Recipes></Recipes></PrivateRoutes>,
             loader: ({params}) => fetch(`https://deshi-recipe-server-hridoyhoque.vercel.app/chefs/${params.id}`)
         },
         {

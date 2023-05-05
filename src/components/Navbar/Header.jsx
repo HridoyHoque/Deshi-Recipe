@@ -32,15 +32,15 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar className='navbar' collapseOnSelect expand="lg" bg="light" variant="light" fixed='top'>
                 <Container>
                     <Link to='/' className='text-decoration-none fw-bold'> <span>Deshi</span> Recipe</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto gap-3">
-                            <NavLink to='/' activeClassName="active" className='text-decoration-none text-black'>Home</NavLink>
-                            <NavLink to='/blog' activeClassName="active" className='text-decoration-none text-black'>Blog</NavLink>
-                            <NavLink to='/registration' activeClassName="active" className='text-decoration-none text-black'>NewUser</NavLink>
+                            <NavLink to='/' activeclassname="active" className='text-decoration-none text-black'>Home</NavLink>
+                            <NavLink to='/blog' activeclassname="active" className='text-decoration-none text-black'>Blog</NavLink>
+                            <NavLink to='/registration' activeclassname="active" className='text-decoration-none text-black'>NewUser</NavLink>
                         </Nav>
                       {user && <Image title={user?.displayName} src={user?.photoURL} width="50" height="50" roundedCircle />}
                         {user ?
