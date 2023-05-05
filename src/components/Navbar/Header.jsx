@@ -32,7 +32,7 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar className='navbar' collapseOnSelect expand="lg" bg="light" variant="light" fixed='top'>
+            <Navbar className='navbar' collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Link to='/' className='text-decoration-none fw-bold'> <span>Deshi</span> Recipe</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
