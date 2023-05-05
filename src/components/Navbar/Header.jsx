@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Button, Container, Image, Nav, NavLink, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -38,9 +38,9 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto gap-3">
-                            <Link to='/' className='text-decoration-none text-black'>Home</Link>
-                            <Link to='/blog' className='text-decoration-none text-black'>Blog</Link>
-                            <Link to='/registration' className='text-decoration-none text-black'>NewUser</Link>
+                            <NavLink to='/' activeClassName="active" className='text-decoration-none text-black'>Home</NavLink>
+                            <NavLink to='/blog' activeClassName="active" className='text-decoration-none text-black'>Blog</NavLink>
+                            <NavLink to='/registration' activeClassName="active" className='text-decoration-none text-black'>NewUser</NavLink>
                         </Nav>
                       {user && <Image title={user?.displayName} src={user?.photoURL} width="50" height="50" roundedCircle />}
                         {user ?

@@ -24,7 +24,7 @@ const RecipeCart = ({ Recipe }) => {
     return (
         <div>
             <Card style={{ width: '18rem' , height: '95%' }}>
-                <Card.Img variant="top" src={recipe_image}/>
+                <Card.Img variant="top" className='img-fluid' style={{ minWidth: "350px", minHeight: "241px",maxWidth: "350px", maxHeight: "241px" }} src={recipe_image}/>
                 <Card.Body>
                     <div className='d-flex align-items-center'>
                     <Card.Title className='flex-grow-1'>{recipe_name}</Card.Title>

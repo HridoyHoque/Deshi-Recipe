@@ -27,6 +27,7 @@ const Recipes = () => {
                <h1 className='text-bold text-center mb-4'>My Popular Recipes</h1>
                <div className='recipe-container'>
                {chefRecipe.map((Recipe) => (<RecipeCart
+               key={Recipe._id}
                 Recipe={Recipe}
                 ></RecipeCart>))
                }

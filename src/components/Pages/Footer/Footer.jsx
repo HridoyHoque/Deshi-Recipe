@@ -30,7 +30,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col md={12} className="text-center">
-            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <p>&copy; 2023 Deshi Recipe. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

@@ -6,6 +6,6 @@
 * This is a single Page application website.
 * I used Vite for this website.
 
-* live link: 
+* live link: https://deshi-recipe-client.web.app
 
 
